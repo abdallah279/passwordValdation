@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Valid</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="box">
+        <div class="input-box">
+            <input id="input" type="password" placeholder="Password" onkeyup="checkPassword(this.value)">
+            <span class="check-ic" id="check"></span>
+        </div>
+        <div class="vaildation">
+            <ul>
+                <li id="lower">At least one lowercase character</li>
+                <li id="upper">At least one uppercase character</li>
+                <li id="num">At least one number</li>
+                <li id="special">At least one special character</li>
+                <li id="length">At least 8 characters</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

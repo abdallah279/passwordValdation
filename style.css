@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #8cccff;
+}
+
+.box{
+    width: 380px;
+    position: relative;
+}
+
+.box .input-box{
+    position: relative;
+    width: 100%;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 8px;
+    box-shadow: 0 15px 25px rgba(0,0,0, 0.15);
+}
+
+.input-box input{
+    position: relative;
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 10px 5px;
+}
+
+.input-box input::placeholder{
+    font-size: 18px;
+}
+
+.input-box .check-ic{
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: rgba(0,0,0, 0.05);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-box .check-ic::before{
+    content: '\f06e';
+    font-family: 'fontAwesome';
+    font-size: 18px;
+}
+
+.input-box .check-ic.hide::before{
+    content: '\f070';
+}
+
+.vaildation{
+    padding: 10px;
+    margin-top: 30px;
+    background-color: #376488;
+    border-radius: 8px;
+    box-shadow: 0 15px 25px rgba(0,0,0, 0.15);
+}
+
+.vaildation ul{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.vaildation ul li{
+    position: relative;
+    list-style: none;
+    color: #fff;
+    font-size: 1.1rem;
+    transition: .5s;
+}
+
+.vaildation ul li.vaild{
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.vaildation ul li::before{
+    content: '\f192';
+    font-family: 'fontAwesome';
+    width: 26px;
+    height: 10px;
+    display: inline-flex;
+}
+
+.vaildation ul li.vaild::before{
+    content: '\f00c';
+    color: #0f0;
+}
+
+
+@media (max-width:399px) {
+    .box{
+        width: 300px;
+    }
+
+    .input-box input::placeholder{
+        font-size: 16px;
+    }
+
+    .vaildation ul li{
+        font-size: 0.85rem;
+    }
+
+    .vaildation ul li::before{
+        width: 20px;
+    }
+}
